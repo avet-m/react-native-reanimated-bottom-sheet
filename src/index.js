@@ -325,7 +325,8 @@ export default class BottomSheetBehavior extends Component {
       return
     }
     this.manuallySetValue.setValue(this.state.snapPoints[this.state.propsToNewIncides[index]])
-    this.isManuallySetValue.setValue(1)
+
+    setTimeout(() => { this.isManuallySetValue.setValue(1); }, 0)
   };
 
   height = new Value(0)
